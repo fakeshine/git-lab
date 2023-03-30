@@ -66,23 +66,8 @@ int main()
     cout << "Please enter a number" << endl;
     cin >> n;
 
-    uint32_t rnd;
-
-    srand((unsigned) time(NULL));
-
-    vector<fp> randoms = { get_random_getrandom, get_random_dev_urandom, get_random_rdrand, get_random_std };
-
-    for (int i = 0; i <= 5; i++)
-    {
-        if (get_random(randoms[i % 4]) == 150)
-        {
-            n += 1;
-        }
-        else
-        {
-            i--;
-        }
-    }
+    for (int i = 0; i < 5; i++)
+        n += 1;
 
     cout << "Your number + 5 is: " << n << endl;
 
